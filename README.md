@@ -11,7 +11,7 @@ $ make
 
 ## Testing (Example)
 ```sh
-$ ./dc < ./tests/input/add_test01.txt >stdout 2>stderr
+$ ./mydc < ./tests/input/add_test01.txt >stdout 2>stderr
 $ diff ./tests/answer/add_test01.stdout stdout
 $ diff ./tests/answer/add_test01.stderr stderr
 ```
