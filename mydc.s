@@ -68,6 +68,7 @@ main:
 
 .input:
     
+    # while (1) {
     # scanf("%s", buffer)
     # %al must be set to 0 before scanf call
     leaq    scanfFormat, %rdi
@@ -79,13 +80,12 @@ main:
     cmp	    $EOF, %eax
     je	    .quit
 
-    # while (1) {
     # 	if (!isdigit(buffer[0])) {
     #		if (buffer[0] == 'p') {
     #			if (stack.peek() == NULL) {
     #				printf("Stack is empty!\n");
     #			} else {
-    #				printf("%d\n", (int)stack.pop());
+    #				printf("%d\n", (int)stack.peek());
     #			}
     #		} else if (buffer[0] == 'q') {
     #			return 0;
